@@ -1,0 +1,30 @@
+{
+  "name": "ISTD-Indore",
+  "version": "1.0.0",
+  "description": "Website for ISTD Indore",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himankpathak/ISTD-Indore.git"
+  },
+  "author": "Himank Pathak <himankpathak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/himankpathak/ISTD-Indore/issues"
+  },
+  "homepage": "https://github.com/himankpathak/ISTD-Indore#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  }
+}

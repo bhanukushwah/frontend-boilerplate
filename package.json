@@ -25,6 +25,10 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "del": "^5.1.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-css-globbing": "^0.2.2",
+    "gulp-sass": "^4.1.0",
+    "sass": "^1.26.8"
   }
 }

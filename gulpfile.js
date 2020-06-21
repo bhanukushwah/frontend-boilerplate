@@ -4,12 +4,27 @@ const uglify = require("gulp-uglify");
 const htmlmin = require("gulp-htmlmin");
 const browserSync = require("browser-sync").create();
 const clean = require("gulp-clean");
+const globbing = require('gulp-css-globbing');
+const sass = require('gulp-sass');
 
 // Copy assets
 gulp.task("copy",() => {
   return gulp
     .src("./src/**/**/*")
     .pipe(gulp.dest("./docs/"));
+});
+
+
+
+gulp.task('scss', function() {
+  return gulp.src('./src/assets/scss/*.scss')
+    .pipe(globbing({
+        // Configure it to use SCSS files
+        extensions: ['.scss']
+    }))
+    .pipe(sass())
+    .pipe(gulp.dest('./src/assets/css'))
+    .pipe(browserSync.stream());
 });
 
 // Minify CSS
@@ -67,4 +82,4 @@ gulp.task("serve",() => {
 gulp.task("build", gulp.series("copy","minify"));
 
 // default task
-gulp.task("default", gulp.series("build","serve"));
+gulp.task("default", gulp.series("scss","build","serve"));

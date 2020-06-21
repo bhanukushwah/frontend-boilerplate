@@ -15,11 +15,10 @@ gulp.task("copy",() => {
 });
 
 
-
+//Compile Scss to css
 gulp.task('scss', function() {
   return gulp.src('./src/assets/scss/*.scss')
     .pipe(globbing({
-        // Configure it to use SCSS files
         extensions: ['.scss']
     }))
     .pipe(sass())
